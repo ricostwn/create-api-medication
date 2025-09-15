@@ -14,12 +14,14 @@ app.use("/api/suppliers", supplierRoutes);
 app.use("/api/categories", categoryRoutes);
 app.use("/api/medications", medicationRoutes);
 
-//const port = process.env.PORT || 3000;
-//app.listen(port, () => {
-//  console.log(`Server running on port ${port}`);
-
-app.get("/", (req, res) => {
-  res.send("API is running 🚀 on Vercel");
+const port = process.env.PORT || 3000;
+app.listen(port, () => {
+  console.log(`Server running on port ${port}`);
 });
 
-export default app;
+
+//app.get("/", (req, res) => {
+//  res.send("API is running 🚀 on Vercel");
+//});
+
+//export default app;
